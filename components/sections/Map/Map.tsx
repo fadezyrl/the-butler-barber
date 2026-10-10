@@ -40,6 +40,7 @@ export const Map = (): React.JSX.Element => {
     <section className="map" id="map">
       <div className="map-label">
         <div>
+          <p className="map-eyebrow">{dictionary.map.eyebrow}</p>
           <h2>{dictionary.map.title}</h2>
           <address>
             {dictionary.brand.name}
@@ -50,8 +51,7 @@ export const Map = (): React.JSX.Element => {
           </address>
         </div>
         <a
-          className="link-line"
-          style={{ alignSelf: "flex-start" }}
+          className="map-link"
           href={mapsSearchUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -65,12 +65,19 @@ export const Map = (): React.JSX.Element => {
         </div>
         {loaded ? (
           <iframe
+            className="map-canvas"
             title={dictionary.a11y.mapTitle}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             src={mapsEmbedUrl}
           />
         ) : null}
+        <div className="map-veil" aria-hidden="true" />
+        <div className="map-frame-line" aria-hidden="true" />
+        <div className="map-pin" aria-hidden="true">
+          <span className="map-pin-dot" />
+          <span className="map-pin-label">{dictionary.map.pinLabel}</span>
+        </div>
       </div>
     </section>
   );

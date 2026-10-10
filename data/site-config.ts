@@ -39,6 +39,7 @@ export type SiteConfig = {
   images: {
     hero: MediaSlot;
     story: MediaSlot;
+    cta: MediaSlot;
     gallery: MediaSlot[];
   };
   reviews: Review[];
@@ -56,7 +57,7 @@ export const SITE_CONFIG: SiteConfig = {
   mapsSearchUrl:
     "https://www.google.com/maps/search/?api=1&query=Gudaibiya+Road+2153+Block+321+Manama+Bahrain",
   mapsEmbedUrl:
-    "https://www.google.com/maps?q=Gudaibiya+Road+2153+Block+321+Manama+Bahrain&output=embed",
+    "https://www.google.com/maps?q=Gudaibiya+Road+2153+Block+321+Manama+Bahrain&hl=en&z=16&output=embed",
   address: {
     street: "Road 2153, Block 321",
     shop: "Shop 3550, Gudaibiya",
@@ -80,6 +81,11 @@ export const SITE_CONFIG: SiteConfig = {
       src: "/assets/classic-fade.jpg",
       alt: "Classic fade finished at The Butler Barber",
       kind: "image",
+    },
+    cta: {
+      src: "/assets/fade-cut.mp4",
+      alt: "Fade cut being finished at The Butler Barber",
+      kind: "video",
     },
     gallery: [
       {
@@ -150,7 +156,13 @@ export const SITE_CONFIG: SiteConfig = {
     ],
   },
   reviews: [],
-  prices: {},
+  prices: {
+    cuts: "BHD 4",
+    fades: "BHD 5",
+    beard: "BHD 3",
+    combo: "BHD 6",
+    full: "BHD 10",
+  },
   serviceIds: ["cuts", "fades", "beard", "combo", "full"],
 };
 

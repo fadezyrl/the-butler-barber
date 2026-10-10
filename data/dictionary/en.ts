@@ -60,7 +60,7 @@ export const en: Dictionary = {
   services: {
     titleLead: "The",
     titleEm: "Menu",
-    note: "The services we offer. Ask us in the shop or by phone for current prices.",
+    note: "Clear prices in Bahraini Dinars. Ask in the shop for kids cuts and add-ons.",
     askPrice: "Ask for price",
     openNote: "Open every day, 9:00 AM to 11:00 PM.",
     items: {
@@ -134,10 +134,12 @@ export const en: Dictionary = {
     body: "Pick a time that suits you and we will have the chair ready.",
   },
   map: {
+    eyebrow: "Location",
     title: "Come by the shop.",
-    openInMaps: "Open in Google Maps",
+    openInMaps: "Get directions",
     fallback:
-      "The map loads as you reach this section. If it does not appear, use Open in Google Maps.",
+      "The map loads as you reach this section. If it does not appear, use Get directions.",
+    pinLabel: "The Butler Barber",
   },
   footer: {
     statement: "Precision cuts, sharp fades and a clean, confident finish.",

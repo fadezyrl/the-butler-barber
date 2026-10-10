@@ -94,9 +94,11 @@ export type Dictionary = {
     body: string;
   };
   map: {
+    eyebrow: string;
     title: string;
     openInMaps: string;
     fallback: string;
+    pinLabel: string;
   };
   footer: {
     statement: string;

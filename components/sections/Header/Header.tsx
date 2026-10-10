@@ -5,21 +5,45 @@ import { useEffect, useState } from "react";
 import { BookLink } from "@/components/ui/BookLink";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { useLanguage } from "@/context/LanguageContext";
-import type { Locale } from "@/data/dictionary";
 
 export const Header = (): React.JSX.Element => {
-  const { dictionary, locale, setLocale } = useLanguage();
+  const { dictionary } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = (): void => {
-      setScrolled(window.scrollY > 40);
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const update = (): void => {
+      const y = window.scrollY;
+      const delta = y - lastY;
+
+      setScrolled(y > 40);
+
+      if (menuOpen || y < 72) {
+        setHidden(false);
+      } else if (delta > 8) {
+        setHidden(true);
+      } else if (delta < -8) {
+        setHidden(false);
+      }
+
+      lastY = y;
+      ticking = false;
     };
-    onScroll();
+
+    const onScroll = (): void => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    };
+
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [menuOpen]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent): void => {
@@ -46,13 +70,14 @@ export const Header = (): React.JSX.Element => {
 
   const closeMenu = (): void => setMenuOpen(false);
 
-  const switchLocale = (next: Locale): void => {
-    setLocale(next);
-  };
-
   return (
     <header
-      className={["nav", scrolled ? "scrolled" : "", menuOpen ? "menu-open" : ""]
+      className={[
+        "nav",
+        scrolled ? "scrolled" : "",
+        hidden ? "nav-hidden" : "",
+        menuOpen ? "menu-open" : "",
+      ]
         .filter(Boolean)
         .join(" ")}
     >
@@ -83,23 +108,6 @@ export const Header = (): React.JSX.Element => {
         <a href="#contact" onClick={closeMenu}>
           {dictionary.nav.contact}
         </a>
-        <div className="lang-switch" role="group" aria-label={dictionary.lang.switchTo}>
-          <button
-            type="button"
-            aria-pressed={locale === "en"}
-            onClick={() => switchLocale("en")}
-          >
-            {dictionary.lang.en}
-          </button>
-          <span aria-hidden="true">/</span>
-          <button
-            type="button"
-            aria-pressed={locale === "ur"}
-            onClick={() => switchLocale("ur")}
-          >
-            {dictionary.lang.ur}
-          </button>
-        </div>
         <BookLink className="book" />
       </nav>
     </header>
