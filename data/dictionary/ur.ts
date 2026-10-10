@@ -107,9 +107,11 @@ export const ur: Dictionary = {
     ],
   },
   reviews: {
+    eyebrow: "کلائنٹ کی آوازیں",
     emptyQuote: "ان لوگوں سے سنیں جو کرسی پر بیٹھتے ہیں۔",
     emptyBody: "گوگل پر دی بٹلر باربر کے بارے میں کلائنٹس کی رائے پڑھیں۔",
     readOnGoogle: "گوگل پر ریویوز پڑھیں",
+    slideLabel: "تعریف {current} از {total}",
   },
   contact: {
     title: "گدیبیہ میں ملیں۔",

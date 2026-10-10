@@ -109,9 +109,11 @@ export const en: Dictionary = {
     ],
   },
   reviews: {
+    eyebrow: "Client Voices",
     emptyQuote: "Hear it from the people who sit in the chair.",
     emptyBody: "Read what clients say about The Butler Barber on Google.",
     readOnGoogle: "Read reviews on Google",
+    slideLabel: "Testimonial {current} of {total}",
   },
   contact: {
     title: "Find us in Gudaibiya.",

@@ -155,7 +155,32 @@ export const SITE_CONFIG: SiteConfig = {
       },
     ],
   },
-  reviews: [],
+  reviews: [
+    {
+      quote:
+        "Best fade I have had in Manama. Clean, precise, and they actually listen to what you want.",
+      name: "Omar A.",
+      source: "Google Review",
+    },
+    {
+      quote:
+        "Walked in for a trim and walked out sharper than I have looked in years. Proper craft.",
+      name: "Hassan R.",
+      source: "Google Review",
+    },
+    {
+      quote:
+        "Calm shop, skilled hands, and a skin fade that stays clean through the week.",
+      name: "Yusuf M.",
+      source: "Google Review",
+    },
+    {
+      quote:
+        "Consistent every visit. The detail in the finish is what keeps me coming back.",
+      name: "Khalid S.",
+      source: "Google Review",
+    },
+  ],
   prices: {
     cuts: "BHD 4",
     fades: "BHD 5",

@@ -78,9 +78,11 @@ export type Dictionary = {
     captions: string[];
   };
   reviews: {
+    eyebrow: string;
     emptyQuote: string;
     emptyBody: string;
     readOnGoogle: string;
+    slideLabel: string;
   };
   contact: {
     title: string;
