@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Butler Barber | Precision cuts and sharp fades in Gudaibiya, Manama</title>
+<meta name="description" content="The Butler Barber in Gudaibiya, Manama: precision haircuts, sharp fades, beard trims and full grooming experiences tailored to your style.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Butler Barber | Gudaibiya, Manama">
+<meta property="og:description" content="Precision haircuts, sharp fades, beard trims and full grooming experiences. Open daily 9 AM to 11 PM.">
+<meta property="og:locale" content="en_BH">
+<meta name="theme-color" content="#1C1C1B">
+<!-- Set the live domain here once known: <link rel="canonical" href="https://YOUR-DOMAIN/"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "The Butler Barber",
+  "description": "Precision haircuts, sharp fades, beard trims and full grooming experiences in Gudaibiya, Manama.",
+  "telephone": "+97335482131",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Road 2153, Block 321, Shop 3550, Gudaibiya",
+    "addressLocality": "Manama",
+    "postalCode": "321",
+    "addressCountry": "BH"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "23:00"
+  }],
+  "sameAs": ["https://www.instagram.com/thebutlerbarber/"]
+}
+</script>
+
+<style>
+:root{
+  --obsidian:#1C1C1B;
+  --gold:#D4AE78;
+  --ivory:#F3F0EA;
+  --stone:#CFC2AE;
+  --espresso:#302923;
+  --black:#151515;
+  --white:#F6F6F6;
+  --gray:#9B9892;
+  /* derived text tones for light surfaces (kept dark enough for contrast) */
+  --ink-soft-ivory:#5E5a52;
+  --ink-soft-stone:#4A4238;
+  --serif:"Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --sans:"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --pad:clamp(1.25rem, 5vw, 5.5rem);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5.5rem;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--obsidian);color:var(--white);font-family:var(--sans);font-weight:400;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--obsidian);padding:.75rem 1rem;z-index:100}
+.skip:focus{left:0}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0;padding:0}
+ul{list-style:none}
+.serif{font-family:var(--serif)}
+
+/* ---------- photo slots ---------- */
+.ph{position:relative;overflow:hidden;background:#262524}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph::before{content:"";position:absolute;inset:0;
+  background:
+   linear-gradient(135deg,rgba(212,174,120,.10),transparent 45%),
+   repeating-linear-gradient(115deg,rgba(246,246,246,.025) 0 1px,transparent 1px 14px),
+   linear-gradient(180deg,#2c2a28,#1f1e1d)}
+.ph.has-img::before,.ph.has-img figcaption{display:none}
+.ph figcaption{position:absolute;left:1rem;bottom:.9rem;font-size:.72rem;color:var(--gray);letter-spacing:.02em;max-width:80%}
+.on-light .ph{background:#d9d2c5}
+.on-light .ph::before{background:
+   linear-gradient(135deg,rgba(48,41,35,.10),transparent 50%),
+   repeating-linear-gradient(115deg,rgba(48,41,35,.04) 0 1px,transparent 1px 14px),
+   linear-gradient(180deg,#d6cebf,#c9bfae)}
+.on-light .ph figcaption{color:var(--ink-soft-ivory)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--obsidian);
+  padding:calc(1.6rem + env(safe-area-inset-top,0px)) var(--pad) 1.6rem;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+  border-bottom:1px solid transparent;transition:padding .5s var(--ease),border-color .5s var(--ease)}
+.nav.scrolled{padding-top:calc(.85rem + env(safe-area-inset-top,0px));padding-bottom:.85rem;border-bottom-color:rgba(212,174,120,.22)}
+.brand{display:inline-flex;align-items:center;min-height:44px}
+.brand img{height:34px;width:auto}
+.wordmark{font-family:var(--serif);font-size:1.55rem;line-height:1;letter-spacing:.01em;font-weight:500}
+.wordmark b{color:var(--gold);font-weight:500}
+.nav-links{display:flex;align-items:center;gap:clamp(1.5rem,3.2vw,3.25rem);font-size:.88rem;font-weight:400;letter-spacing:.02em}
+.nav-links a:not(.book){position:relative;padding:.4rem 0;color:var(--white)}
+.nav-links a:not(.book)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .45s var(--ease)}
+.nav-links a:not(.book):hover::after{right:0}
+.book{color:var(--gold);padding:.55rem 0 .55rem 1.6rem;border-left:1px solid rgba(212,174,120,.45);font-weight:500;transition:color .3s}
+.book:hover{color:var(--white)}
+.menu-btn{display:none;background:none;border:0;color:var(--white);width:44px;height:44px;cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:10px;right:10px;height:1px;background:currentColor;transition:transform .4s var(--ease),top .4s var(--ease),opacity .3s}
+.menu-btn span:nth-child(1){top:16px}.menu-btn span:nth-child(2){top:27px}
+.menu-open .menu-btn span:nth-child(1){top:21px;transform:rotate(45deg)}
+.menu-open .menu-btn span:nth-child(2){top:21px;transform:rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--obsidian);position:relative;padding:calc(9rem + env(safe-area-inset-top,0px)) var(--pad) 4rem;
+  display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;min-height:100svh;align-content:center}
+.hero-copy{grid-column:1 / 8;grid-row:1;align-self:center;position:relative;z-index:2;padding-bottom:3rem}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.2rem,8.6vw,9rem);line-height:.94;letter-spacing:-.015em}
+.hero h1 em{display:block;font-style:italic;color:var(--gold);margin-left:clamp(1rem,8vw,8rem)}
+.hero-sub{max-width:30rem;margin-top:2.5rem;color:#d6d4cf;font-size:1.02rem;font-weight:300}
+.hero-actions{margin-top:2.5rem;display:flex;align-items:center;gap:2.25rem;flex-wrap:wrap}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--obsidian);padding:1.05rem 2.1rem;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:background .3s,color .3s}
+.btn-gold:hover{background:var(--white)}
+.link-line{position:relative;padding-bottom:.3rem;font-size:.92rem}
+.link-line::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;opacity:.5;transition:opacity .3s}
+.link-line:hover::after{opacity:1}
+.hero-photo{grid-column:7 / 13;grid-row:1;align-self:stretch;min-height:68vh;margin-top:-1rem;position:relative}
+.hero-photo .ph{position:absolute;inset:0}
+.hero-meta{position:absolute;right:calc(var(--pad) - 1.7rem);bottom:4rem;writing-mode:vertical-rl;transform:rotate(180deg);font-size:.78rem;color:var(--gray);letter-spacing:.06em}
+.hero-foot{grid-column:1 / -1;grid-row:2;margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid rgba(246,246,246,.14);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem;color:var(--gray)}
+.hero-foot strong{color:var(--white);font-weight:500}
+
+/* ---------- story ---------- */
+.story{background:var(--ivory);color:var(--obsidian);padding:clamp(6rem,12vw,11rem) var(--pad);display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;position:relative}
+.story .on-light{display:contents}
+.story-photo{grid-column:1 / 6;grid-row:1 / 3;aspect-ratio:4/5.4;margin-top:6rem}
+.story-photo .ph{position:absolute;inset:0}
+.story-photo{position:relative}
+.story-photo::after{content:"";position:absolute;right:-1.2rem;bottom:-1.2rem;width:42%;height:42%;border:1px solid var(--gold);z-index:-1}
+.story h2{grid-column:5 / 13;grid-row:1;font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,6vw,6rem);line-height:1;letter-spacing:-.01em;position:relative;z-index:2;align-self:start}
+.story h2 span{display:block;padding-left:clamp(0rem,6vw,6rem);color:var(--espresso);font-style:italic}
+.story-text{grid-column:8 / 13;grid-row:2;align-self:start;margin-top:2.5rem}
+.story-text p{font-size:1.04rem;color:#37332e;max-width:30rem}
+.story-text p + p{margin-top:1.3rem}
+.story-line{margin-top:3rem;padding-top:1.4rem;border-top:1px solid rgba(28,28,27,.25);font-family:var(--serif);font-size:1.7rem;line-height:1.2;max-width:22rem}
+.story-line i{color:#8a6a3b}
+
+/* ---------- services ---------- */
+.services{background:var(--stone);color:var(--obsidian);padding:clamp(5rem,10vw,9rem) var(--pad);display:grid;grid-template-columns:4fr 8fr;gap:clamp(2rem,6vw,7rem)}
+.services-head{position:relative}
+.services-head-inner{position:sticky;top:7rem}
+.services h2{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,7.5vw,7.5rem);line-height:.9;letter-spacing:-.02em}
+.services h2 span{display:block;font-style:italic;color:var(--espresso)}
+.services-note{margin-top:2rem;max-width:18rem;font-size:.95rem;color:var(--ink-soft-stone)}
+.menu-list{border-top:1px solid var(--obsidian)}
+.menu-item{display:grid;grid-template-columns:1fr auto;column-gap:2rem;align-items:baseline;padding:2rem 0;border-bottom:1px solid rgba(28,28,27,.35);transition:padding-left .5s var(--ease)}
+.menu-item:hover{padding-left:1rem}
+.menu-item h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,3.4vw,3.1rem);line-height:1.05}
+.menu-item p{grid-column:1;margin-top:.55rem;color:var(--ink-soft-stone);font-size:.95rem;max-width:30rem}
+.price{grid-column:2;grid-row:1;font-weight:500;font-size:1rem;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.price.na{font-weight:300;color:var(--ink-soft-stone);font-size:.9rem}
+.menu-foot{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;padding-top:2rem}
+.menu-foot p{font-size:.9rem;color:var(--ink-soft-stone);max-width:24rem}
+.btn-dark{display:inline-block;background:var(--obsidian);color:var(--ivory);padding:1.05rem 2.1rem;font-weight:600;font-size:.92rem;letter-spacing:.02em;transition:background .3s,color .3s}
+.btn-dark:hover{background:var(--espresso)}
+
+/* ---------- gallery ---------- */
+.gallery{background:var(--obsidian);padding:clamp(5rem,10vw,9rem) 0 clamp(4rem,8vw,7rem);overflow:hidden}
+.gallery-head{padding:0 var(--pad);display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3.5rem}
+.gallery h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,6.5vw,6.5rem);line-height:.95;letter-spacing:-.015em}
+.gallery-head p{max-width:20rem;color:var(--gray);font-size:.95rem}
+.track{display:flex;align-items:flex-start;gap:clamp(1rem,2vw,2rem);overflow-x:auto;padding:0 var(--pad) 1rem;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.shot{flex:0 0 auto;scroll-snap-align:start;position:relative}
+.shot .ph{width:100%;height:100%}
+.shot.a{width:min(30vw,26rem);aspect-ratio:3/4.2}
+.shot.b{width:min(42vw,38rem);aspect-ratio:4/3;margin-top:7rem}
+.shot.c{width:min(24vw,21rem);aspect-ratio:1/1.35;margin-top:2.5rem}
+.shot.d{width:min(36vw,32rem);aspect-ratio:5/4;margin-top:9rem}
+.shot.e{width:min(28vw,24rem);aspect-ratio:3/4.4}
+.shot.f{width:min(40vw,34rem);aspect-ratio:16/11;margin-top:5rem}
+.shot .ph img{transition:transform 1.2s var(--ease)}
+.shot:hover .ph img{transform:scale(1.04)}
+.gallery-foot{padding:2rem var(--pad) 0;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.arrows{display:flex;gap:.75rem}
+.arrows button{width:48px;height:48px;border:1px solid rgba(246,246,246,.3);background:none;color:var(--white);cursor:pointer;font:inherit;font-size:1.1rem;transition:border-color .3s,color .3s}
+.arrows button:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ---------- testimonials ---------- */
+.reviews{background:var(--ivory);color:var(--obsidian);padding:clamp(6rem,11vw,10rem) var(--pad);display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem}
+.q-mark{grid-column:2 / 4;font-family:var(--serif);font-size:clamp(9rem,18vw,18rem);line-height:.7;color:var(--gold);height:clamp(5rem,9vw,9rem)}
+.review-body{grid-column:4 / 12}
+.review-quote{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.8vw,3.6rem);line-height:1.15;letter-spacing:-.005em}
+.review-by{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid rgba(28,28,27,.25);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.9rem;color:var(--ink-soft-ivory);max-width:34rem}
+.review-by strong{color:var(--obsidian);font-weight:600}
+.review-nav{margin-top:2rem;display:flex;gap:1.5rem;font-size:.9rem}
+.review-nav button{background:none;border:0;border-bottom:1px solid rgba(28,28,27,.4);padding:0 0 .25rem;font:inherit;color:var(--obsidian);cursor:pointer}
+.review-empty .review-quote{max-width:46rem}
+.review-empty p.sm{margin-top:1.8rem;max-width:30rem;color:var(--ink-soft-ivory)}
+
+/* ---------- contact ---------- */
+.contact{background:var(--espresso);color:var(--ivory);padding:clamp(5rem,10vw,9rem) var(--pad);display:grid;grid-template-columns:7fr 5fr;gap:clamp(3rem,8vw,9rem)}
+.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,5.6vw,5.4rem);line-height:1;letter-spacing:-.01em}
+.address{margin-top:3rem;font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.5rem);line-height:1.25;font-style:normal;color:var(--ivory)}
+.address span{display:block;color:var(--stone)}
+.phone{display:inline-block;margin-top:2.5rem;font-size:clamp(1.5rem,2.6vw,2.2rem);font-family:var(--serif);border-bottom:1px solid var(--gold);padding-bottom:.2rem;color:var(--gold);transition:color .3s}
+.phone:hover{color:var(--white)}
+.contact-actions{margin-top:2.5rem;display:flex;gap:2.25rem;flex-wrap:wrap;align-items:center}
+.contact .link-line{color:var(--stone)}
+.hours h3{font-family:var(--serif);font-weight:500;font-size:1.8rem;margin-bottom:1.5rem}
+.hours dl{border-top:1px solid rgba(243,240,234,.25)}
+.hours .row{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(243,240,234,.14);font-size:.98rem;font-variant-numeric:tabular-nums}
+.hours dt{color:var(--stone)}
+.hours dd{color:var(--ivory)}
+.hours .row.today{color:var(--gold)}
+.hours .row.today dt,.hours .row.today dd{color:var(--gold)}
+.hours-note{margin-top:1.2rem;font-size:.82rem;color:var(--gray)}
+
+/* ---------- booking cta ---------- */
+.cta{background:var(--gold);color:var(--obsidian);padding:clamp(6rem,13vw,12rem) var(--pad);display:grid;grid-template-columns:repeat(12,1fr);column-gap:1.5rem;align-items:end}
+.cta h2{grid-column:1 / 10;font-family:var(--serif);font-weight:500;font-size:clamp(3.4rem,10.5vw,11rem);line-height:.88;letter-spacing:-.025em}
+.cta-side{grid-column:10 / 13;padding-bottom:.8rem}
+.cta-side p{font-size:1rem;margin-bottom:1.8rem;max-width:18rem;font-weight:500}
+
+/* ---------- map ---------- */
+.map{background:var(--ivory);color:var(--obsidian);display:grid;grid-template-columns:4fr 8fr;min-height:34rem}
+.map-label{padding:clamp(3rem,6vw,5.5rem) clamp(1.5rem,3vw,3.5rem) clamp(3rem,6vw,5.5rem) var(--pad);display:flex;flex-direction:column;justify-content:space-between;gap:2.5rem}
+.map-label h2{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,3.8vw,3.6rem);line-height:1}
+.map-label address{font-style:normal;margin-top:1.4rem;color:#37332e;font-size:1rem;max-width:18rem}
+.map-frame{position:relative;background:#d6cebf;min-height:26rem}
+.map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.55) contrast(1.02)}
+.map-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem;color:var(--ink-soft-ivory);font-size:.92rem;z-index:0}
+.map-frame iframe{z-index:1}
+
+/* ---------- footer ---------- */
+.footer{background:var(--black);color:var(--gray);padding:clamp(4rem,7vw,6rem) var(--pad) calc(2.5rem + env(safe-area-inset-bottom,0px))}
+.foot-top{display:grid;grid-template-columns:5fr 7fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(246,246,246,.12)}
+.foot-statement{font-family:var(--serif);font-size:clamp(1.5rem,2.4vw,2.2rem);line-height:1.2;color:var(--white);margin-top:1.8rem;max-width:26rem}
+.foot-info{display:flex;flex-wrap:wrap;gap:2rem 4rem;justify-content:flex-end;align-content:flex-start;font-size:.92rem}
+.foot-info nav{display:flex;flex-direction:column;gap:.4rem}
+.foot-info a:hover{color:var(--gold)}
+.foot-info p{max-width:15rem}
+.foot-info strong{display:block;color:var(--white);font-weight:500;margin-bottom:.3rem}
+.foot-bottom{padding-top:1.6rem;font-size:.8rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* ---------- motion ---------- */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+.js .hero h1 em{opacity:0;transform:translateX(-24px);transition:opacity 1.2s var(--ease) .35s,transform 1.2s var(--ease) .35s}
+.js .hero.ready h1 em{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important}
+  .js .reveal,.js .hero h1 em{opacity:1;transform:none}
+}
+
+/* ---------- tablet ---------- */
+@media (max-width:1000px){
+  .nav-links{gap:1.6rem}
+  .hero-copy{grid-column:1 / 9}
+  .hero-photo{grid-column:6 / 13}
+  .story-photo{grid-column:1 / 7}
+  .story h2{grid-column:4 / 13}
+  .story-text{grid-column:7 / 13}
+  .services{grid-template-columns:1fr}
+  .services-head-inner{position:static}
+  .contact{grid-template-columns:1fr}
+  .cta h2{grid-column:1 / -1}
+  .cta-side{grid-column:1 / -1;margin-top:3rem}
+  .foot-top{grid-template-columns:1fr}
+  .foot-info{justify-content:flex-start}
+  .map{grid-template-columns:1fr}
+  .map-label{padding-right:var(--pad)}
+}
+
+/* ---------- mobile ---------- */
+@media (max-width:760px){
+  .menu-btn{display:block}
+  .nav-links{position:fixed;inset:0;background:var(--obsidian);flex-direction:column;align-items:flex-start;justify-content:center;gap:1.4rem;padding:var(--pad);
+    font-family:var(--serif);font-size:2.4rem;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s;z-index:-1}
+  .menu-open .nav-links{opacity:1;visibility:visible}
+  .menu-open{overflow:hidden}
+  .nav-links a:not(.book){font-size:2.4rem}
+  .book{border-left:0;padding-left:0;font-family:var(--sans);font-size:1rem;margin-top:1rem;border-top:1px solid rgba(212,174,120,.45);padding-top:1.4rem}
+  .brand,.menu-btn{position:relative;z-index:2}
+
+  .hero{display:flex;flex-direction:column;padding-top:calc(6.5rem + env(safe-area-inset-top,0px));min-height:0}
+  .hero-photo{order:1;width:100%;aspect-ratio:4/4.6;min-height:0;margin:0 0 0 0}
+  .hero-copy{order:2;padding:2rem 0 1rem}
+  .hero h1{font-size:clamp(3.1rem,15vw,5rem)}
+  .hero h1 em{margin-left:0}
+  .hero-meta{display:none}
+  .hero-foot{order:3;margin-top:1.5rem}
+  .hero-actions{gap:1.5rem}
+
+  .story{display:flex;flex-direction:column;padding-top:5rem;padding-bottom:5rem}
+  .story h2{order:1}
+  .story h2 span{padding-left:0}
+  .story-photo{order:2;width:86%;margin:2.5rem 0 0 0}
+  .story-text{order:3;margin-top:3rem}
+  .story-line{max-width:none}
+
+  .menu-item{padding:1.5rem 0}
+  .menu-item:hover{padding-left:0}
+
+  .shot.a{width:70vw}.shot.b{width:84vw;margin-top:3rem}.shot.c{width:56vw;margin-top:1rem}
+  .shot.d{width:76vw;margin-top:4rem}.shot.e{width:62vw}.shot.f{width:84vw;margin-top:2rem}
+
+  .reviews{display:block}
+  .q-mark{height:4.5rem;font-size:8rem}
+
+  .cta h2{font-size:clamp(3.2rem,16vw,5.6rem)}
+  .btn-gold,.btn-dark{text-align:center}
+  .map-frame{min-height:22rem}
+  .foot-info{gap:2rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ CONFIG: everything unverified lives here ============ -->
+<script>
+window.BB = {
+  // Logo: put the original logo file (data URI or hosted file) here. Never redraw it.
+  LOGO_SRC: "",
+  // Booking: leave empty to book by phone. Add a verified booking link here once agreed.
+  BOOKING_URL: "",
+  PHONE_TEL: "tel:+97335482131",
+  // Real photographs. Leave a slot empty and a labelled placeholder shows instead.
+  IMAGES: {
+    hero:  { src: "", alt: "A barber finishing a fade at The Butler Barber" },
+    story: { src: "", alt: "Inside The Butler Barber in Gudaibiya" },
+    gallery: [
+      { src: "", alt: "" }, { src: "", alt: "" }, { src: "", alt: "" },
+      { src: "", alt: "" }, { src: "", alt: "" }, { src: "", alt: "" }
+    ]
+  },
+  // Verified customer reviews only. Format: { quote, name, source }
+  REVIEWS: [],
+  // Verified prices only. Keys match the service ids below, e.g. { cuts: "BHD 4" }
+  PRICES: {}
+};
+</script>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="The Butler Barber, home">
+    <span id="logoSlot"><span class="wordmark"><b>The Butler</b> Barber</span></span>
+  </a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks" aria-label="Main">
+    <a href="#story">Our Story</a>
+    <a href="#services">Services</a>
+    <a href="#work">Our Work</a>
+    <a href="#contact">Contact</a>
+    <a class="book" data-book href="tel:+97335482131">Book Appointment</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <h1>Sharp by Craft.<em>Distinct by Nature.</em></h1>
+    <p class="hero-sub">Precision cuts, sharp fades and considered grooming. Find your style at The Butler Barber in Gudaibiya, Manama.</p>
+    <div class="hero-actions">
+      <a class="btn-gold" data-book href="tel:+97335482131">Book Appointment</a>
+      <a class="link-line" href="#work">Explore Our Work</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <figure class="ph" data-slot="hero"><figcaption>Hero photograph: a barber at work, vertical crop</figcaption></figure>
+  </div>
+  <p class="hero-meta">Gudaibiya, Manama, Bahrain</p>
+  <div class="hero-foot">
+    <span><strong>Open every day</strong> from 9:00 AM to 11:00 PM</span>
+    <span>Road 2153, Block 321, Shop 3550</span>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="on-light">
+    <h2 class="reveal">Tradition in the Craft.<span>Modern in the Detail.</span></h2>
+    <div class="story-photo"><figure class="ph" data-slot="story"><figcaption>Story photograph: the shop or a cut in progress, portrait crop</figcaption></figure></div>
+    <div class="story-text reveal">
+      <p>The Butler Barber is where tradition meets trend. We specialise in precision haircuts, sharp fades, beard trims and full grooming experiences, each one tailored to your style.</p>
+      <p>From the heart of Gudaibiya, the aim is simple: to keep you looking sharp, clean and confident.</p>
+      <p class="story-line">Sharp. Clean. <i>Confident.</i></p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-head">
+    <div class="services-head-inner">
+      <h2>The<span>Menu</span></h2>
+      <p class="services-note">The services we offer. Ask us in the shop or by phone for current prices.</p>
+    </div>
+  </div>
+  <div>
+    <ul class="menu-list" id="menuList">
+      <li class="menu-item" data-id="cuts"><h3>Precision Haircuts</h3><p>Cut to your head shape, your hair and the way you wear it.</p><span class="price na">Ask for price</span></li>
+      <li class="menu-item" data-id="fades"><h3>Skin Fades</h3><p>Clean, sharp transitions blended with care.</p><span class="price na">Ask for price</span></li>
+      <li class="menu-item" data-id="beard"><h3>Beard Trims</h3><p>Shaped and tidied to frame the face.</p><span class="price na">Ask for price</span></li>
+      <li class="menu-item" data-id="combo"><h3>Haircut and Beard</h3><p>Cut and beard finished together in one visit.</p><span class="price na">Ask for price</span></li>
+      <li class="menu-item" data-id="full"><h3>Full Grooming Experience</h3><p>The complete look, tailored to your style.</p><span class="price na">Ask for price</span></li>
+    </ul>
+    <div class="menu-foot">
+      <p>Open every day, 9:00 AM to 11:00 PM.</p>
+      <a class="btn-dark" data-book href="tel:+97335482131">Book Appointment</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="work">
+  <div class="gallery-head">
+    <h2 class="reveal">Every Detail Matters.</h2>
+    <p>Cuts, fades and finishes from the chair. Follow along on <a class="link-line" style="color:var(--white)" href="https://www.instagram.com/thebutlerbarber/" target="_blank" rel="noopener">Instagram</a>.</p>
+  </div>
+  <div class="track" id="track" tabindex="0" aria-label="Gallery of work, scroll sideways">
+    <div class="shot a"><figure class="ph" data-gal="0"><figcaption>Close-up of a finished fade</figcaption></figure></div>
+    <div class="shot b"><figure class="ph" data-gal="1"><figcaption>Barber at work, landscape</figcaption></figure></div>
+    <div class="shot c"><figure class="ph" data-gal="2"><figcaption>Beard detail</figcaption></figure></div>
+    <div class="shot d"><figure class="ph" data-gal="3"><figcaption>Finished style</figcaption></figure></div>
+    <div class="shot e"><figure class="ph" data-gal="4"><figcaption>Tools and texture</figcaption></figure></div>
+    <div class="shot f"><figure class="ph" data-gal="5"><figcaption>Inside the shop</figcaption></figure></div>
+  </div>
+  <div class="gallery-foot">
+    <span style="font-size:.85rem;color:var(--gray)">Scroll or use the arrows</span>
+    <div class="arrows"><button type="button" id="prev" aria-label="Previous images">&larr;</button><button type="button" id="next" aria-label="Next images">&rarr;</button></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="q-mark" aria-hidden="true">&ldquo;</div>
+  <div class="review-body" id="reviewBody">
+    <div class="review-empty">
+      <p class="review-quote">Hear it from the people who sit in the chair.</p>
+      <p class="sm">Read what clients say about The Butler Barber on Google.</p>
+      <div class="review-nav"><a class="link-line" href="https://share.google/fu5eYccUNoOqsL8TA" target="_blank" rel="noopener">Read reviews on Google</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div>
+    <h2>Find us in Gudaibiya.</h2>
+    <address class="address">Road 2153, Block 321<span>Shop 3550, Gudaibiya</span><span>Manama 321, Bahrain</span></address>
+    <a class="phone" href="tel:+97335482131">+973 3548 2131</a>
+    <div class="contact-actions">
+      <a class="btn-gold" data-book href="tel:+97335482131">Book Appointment</a>
+      <a class="link-line" href="https://www.google.com/maps/search/?api=1&query=Gudaibiya+Road+2153+Block+321+Manama+Bahrain" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+  <div class="hours">
+    <h3>Opening hours</h3>
+    <dl id="hoursList">
+      <div class="row" data-day="Sat"><dt>Saturday</dt><dd>9:00 AM &ndash; 11:00 PM</dd></div>
+      <div class="row" data-day="Sun"><dt>Sunday</dt><dd>9:00 AM &ndash; 11:00 PM</dd></div>
+      <div class="row" data-day="Mon"><dt>Monday</dt><dd>9:00 AM &ndash; 11:00 PM</dd></div>
+      <div class="row" data-day="Tue"><dt>Tuesday</dt><dd>9:00 AM &ndash; 11:00 PM</dd></div>
+      <div class="row" data-day="Wed"><dt>Wednesday</dt><dd>9:00 AM &ndash; 11:00 PM</dd></div>
+      <div class="row" data-day="Thu"><dt>Thursday</dt><dd>9:00 AM &ndash; 11:00 PM</dd></div>
+      <div class="row" data-day="Fri"><dt>Friday</dt><dd>9:00 AM &ndash; 11:00 PM</dd></div>
+    </dl>
+    <p class="hours-note">Hours as supplied by the business. Call to confirm before a special occasion or holiday.</p>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section class="cta" id="book">
+  <h2>Your Next Cut Starts Here.</h2>
+  <div class="cta-side">
+    <p>Pick a time that suits you and we will have the chair ready.</p>
+    <a class="btn-dark" data-book href="tel:+97335482131">Book Appointment</a>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map" id="map">
+  <div class="map-label">
+    <div>
+      <h2>Come by the shop.</h2>
+      <address>The Butler Barber<br>Road 2153, Block 321, Shop 3550<br>Gudaibiya, Manama 321, Bahrain</address>
+    </div>
+    <a class="link-line" style="align-self:flex-start" href="https://www.google.com/maps/search/?api=1&query=Gudaibiya+Road+2153+Block+321+Manama+Bahrain" target="_blank" rel="noopener">Open in Google Maps</a>
+  </div>
+  <div class="map-frame" id="mapFrame">
+    <div class="map-fallback"><span>The map loads as you reach this section. If it does not appear, use Open in Google Maps.</span></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="foot-top">
+    <div>
+      <span id="logoSlotFoot"><span class="wordmark" style="color:var(--white)"><b>The Butler</b> Barber</span></span>
+      <p class="foot-statement">Precision cuts, sharp fades and a clean, confident finish.</p>
+    </div>
+    <div class="foot-info">
+      <nav aria-label="Footer">
+        <strong>Explore</strong>
+        <a href="#story">Our Story</a>
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div>
+        <strong>Visit</strong>
+        <p>Road 2153, Block 321, Shop 3550, Gudaibiya, Manama 321, Bahrain</p>
+      </div>
+      <div>
+        <strong>Reach us</strong>
+        <p><a href="tel:+97335482131">+973 3548 2131</a></p>
+        <p><a href="https://www.instagram.com/thebutlerbarber/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; <span id="yr">2026</span> The Butler Barber. All rights reserved.</span>
+    <span>Open every day, 9:00 AM to 11:00 PM</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var C = window.BB, d = document, de = d.documentElement;
+  de.classList.add('js');
+
+  // logo
+  if (C.LOGO_SRC) {
+    ['logoSlot','logoSlotFoot'].forEach(function(id){
+      var el = d.getElementById(id);
+      el.innerHTML = '<img src="'+C.LOGO_SRC+'" alt="The Butler Barber">';
+    });
+  }
+
+  // booking links
+  if (C.BOOKING_URL) {
+    d.querySelectorAll('[data-book]').forEach(function(a){
+      a.href = C.BOOKING_URL; a.target = '_blank'; a.rel = 'noopener';
+    });
+  }
+
+  // photo slots
+  function fill(fig, item, eager){
+    if (!item || !item.src) return;
+    var img = new Image();
+    img.src = item.src; img.alt = item.alt || '';
+    img.decoding = 'async';
+    if (!eager) img.loading = 'lazy';
+    fig.appendChild(img);
+    fig.classList.add('has-img');
+  }
+  fill(d.querySelector('[data-slot="hero"]'), C.IMAGES.hero, true);
+  fill(d.querySelector('[data-slot="story"]'), C.IMAGES.story, false);
+  d.querySelectorAll('[data-gal]').forEach(function(f){ fill(f, C.IMAGES.gallery[+f.dataset.gal], false); });
+
+  // prices
+  d.querySelectorAll('.menu-item').forEach(function(li){
+    var p = C.PRICES[li.dataset.id];
+    if (p) { var s = li.querySelector('.price'); s.textContent = p; s.classList.remove('na'); }
+  });
+
+  // reviews
+  if (C.REVIEWS && C.REVIEWS.length) {
+    var body = d.getElementById('reviewBody'), i = 0;
+    function show(n){
+      var r = C.REVIEWS[n];
+      body.innerHTML = '<blockquote style="margin:0"><p class="review-quote"></p></blockquote><div class="review-by"><strong></strong><span></span></div>' +
+        (C.REVIEWS.length > 1 ? '<div class="review-nav"><button type="button" id="rp">Previous</button><button type="button" id="rn">Next</button></div>' : '');
+      body.querySelector('.review-quote').textContent = r.quote;
+      body.querySelector('strong').textContent = r.name;
+      body.querySelector('.review-by span').textContent = r.source;
+      if (C.REVIEWS.length > 1) {
+        d.getElementById('rp').onclick = function(){ i = (i - 1 + C.REVIEWS.length) % C.REVIEWS.length; show(i); };
+        d.getElementById('rn').onclick = function(){ i = (i + 1) % C.REVIEWS.length; show(i); };
+      }
+    }
+    show(0);
+  }
+
+  // nav scroll state + mobile menu
+  var nav = d.getElementById('nav'), btn = d.getElementById('menuBtn');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 40); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+  function setMenu(open){
+    nav.classList.toggle('menu-open', open); d.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', open); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  btn.addEventListener('click', function(){ setMenu(!nav.classList.contains('menu-open')); });
+  d.querySelectorAll('#navLinks a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  d.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+
+  // hero entrance
+  requestAnimationFrame(function(){ d.querySelector('.hero').classList.add('ready'); });
+
+  // reveals
+  var rv = d.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:.15});
+    rv.forEach(function(el){ io.observe(el); });
+  } else { rv.forEach(function(el){ el.classList.add('in'); }); }
+
+  // gallery arrows
+  var track = d.getElementById('track');
+  function step(dir){ track.scrollBy({left: dir * Math.round(track.clientWidth * .6), behavior:'smooth'}); }
+  d.getElementById('prev').onclick = function(){ step(-1); };
+  d.getElementById('next').onclick = function(){ step(1); };
+
+  // today's hours (Bahrain time)
+  try {
+    var today = new Intl.DateTimeFormat('en-US', {weekday:'short', timeZone:'Asia/Bahrain'}).format(new Date());
+    var row = d.querySelector('#hoursList [data-day="'+today+'"]');
+    if (row) row.classList.add('today');
+  } catch(e){}
+
+  // lazy map: address query only, no guessed coordinates
+  var mf = d.getElementById('mapFrame'), loaded = false;
+  function loadMap(){
+    if (loaded) return; loaded = true;
+    var f = d.createElement('iframe');
+    f.title = 'Map showing The Butler Barber, Gudaibiya, Manama';
+    f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade';
+    f.src = 'https://www.google.com/maps?q=Gudaibiya+Road+2153+Block+321+Manama+Bahrain&output=embed';
+    mf.appendChild(f);
+  }
+  if ('IntersectionObserver' in window) {
+    var mo = new IntersectionObserver(function(es){ if (es[0].isIntersecting){ loadMap(); mo.disconnect(); } }, {rootMargin:'400px'});
+    mo.observe(mf);
+  } else loadMap();
+
+  d.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

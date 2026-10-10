@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="The Butler Barber">
+  <rect width="32" height="32" rx="6" fill="#1C1C1B"/>
+  <rect x="1.25" y="1.25" width="29.5" height="29.5" rx="5" fill="none" stroke="#D4AE78" stroke-width="1"/>
+  <path
+    fill="#D4AE78"
+    d="M9.2 7.2h7.1c2.95 0 4.85 1.45 4.85 3.7 0 1.55-.85 2.7-2.25 3.25 1.8.55 2.9 1.9 2.9 3.85 0 2.55-2.1 4.1-5.35 4.1H9.2V7.2zm3.15 2.35v3.55h3.55c1.35 0 2.1-.65 2.1-1.8s-.75-1.75-2.1-1.75h-3.55zm0 5.9v4.05h4.05c1.55 0 2.45-.75 2.45-2.05s-.9-2-2.45-2H12.35z"
+  />
+</svg>
