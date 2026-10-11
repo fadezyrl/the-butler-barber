@@ -18,22 +18,31 @@ export const Services = (): React.JSX.Element => {
           <p className="services-note">{dictionary.services.note}</p>
         </div>
       </div>
-      <div>
-        <ul className="menu-list">
-          {SITE_CONFIG.serviceIds.map((id) => {
-            const item = dictionary.services.items[id];
-            const price = SITE_CONFIG.prices[id];
-            return (
-              <li className="menu-item" key={id} data-id={id}>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <span className={price ? "price" : "price na"}>
-                  {price ?? dictionary.services.askPrice}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
+
+      <div className="services-menu">
+        {SITE_CONFIG.serviceMenu.map((category) => (
+          <section
+            className="menu-group"
+            key={category.id}
+            aria-labelledby={`menu-${category.id}`}
+          >
+            <h3 className="menu-group-title" id={`menu-${category.id}`}>
+              {dictionary.services.categories[category.id]}
+            </h3>
+            <ul className="menu-list">
+              {category.items.map((item) => (
+                <li className="menu-item" key={item.id}>
+                  <span className="menu-item-name">
+                    {dictionary.services.items[item.id]}
+                  </span>
+                  <span className="menu-item-rule" aria-hidden="true" />
+                  <span className="price">{item.price}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+
         <div className="menu-foot">
           <p>{dictionary.services.openNote}</p>
           <BookLink className="btn-dark" />

@@ -1,6 +1,6 @@
-import type { ServiceId } from "@/data/site-config";
+import type { ServiceCategoryId, ServiceItemId } from "@/data/site-config";
 
-export type Locale = "en" | "ur";
+export type Locale = "en" | "ar";
 
 export type Dictionary = {
   meta: {
@@ -27,6 +27,7 @@ export type Dictionary = {
     prevReview: string;
     nextReview: string;
     mapTitle: string;
+    whatsapp: string;
   };
   nav: {
     story: string;
@@ -61,13 +62,8 @@ export type Dictionary = {
     note: string;
     askPrice: string;
     openNote: string;
-    items: Record<
-      ServiceId,
-      {
-        title: string;
-        description: string;
-      }
-    >;
+    categories: Record<ServiceCategoryId, string>;
+    items: Record<ServiceItemId, string>;
   };
   gallery: {
     title: string;
@@ -112,7 +108,7 @@ export type Dictionary = {
   };
   lang: {
     en: string;
-    ur: string;
+    ar: string;
     switchTo: string;
   };
 };

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Manrope,
+  Noto_Naskh_Arabic,
+  Noto_Sans_Arabic,
+} from "next/font/google";
 
 import { JsClass } from "@/components/JsClass";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -19,6 +24,18 @@ const cormorant = Cormorant_Garamond({
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+});
+
+const notoNaskh = Noto_Naskh_Arabic({
+  variable: "--font-noto-naskh",
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const notoSansArabic = Noto_Sans_Arabic({
+  variable: "--font-noto-sans-arabic",
+  subsets: ["arabic"],
   weight: ["300", "400", "500", "600"],
 });
 
@@ -74,7 +91,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${manrope.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={`${cormorant.variable} ${manrope.variable} ${notoNaskh.variable} ${notoSansArabic.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         <script

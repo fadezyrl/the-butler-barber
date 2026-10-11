@@ -12,13 +12,54 @@ export type Review = {
   source: string;
 };
 
-export type ServiceId = "cuts" | "fades" | "beard" | "combo" | "full";
+export type ServiceCategoryId =
+  | "hair"
+  | "beard"
+  | "colorFacial"
+  | "waxTreatment";
+
+export type ServiceItemId =
+  | "classicCut"
+  | "buzzCut"
+  | "fadeCut"
+  | "skinFade"
+  | "childrenCut"
+  | "headShave"
+  | "hairShampoo"
+  | "beardTrim"
+  | "cleanShave"
+  | "beardStyling"
+  | "hotTowelShave"
+  | "beardFadeStyle"
+  | "hairBeardColor"
+  | "colorCorrection"
+  | "highlights"
+  | "classicFacial"
+  | "cleansingFacial"
+  | "brighteningFacial"
+  | "specialFacial"
+  | "fullFaceWax"
+  | "noseEarWax"
+  | "hairKeratin"
+  | "curlyHairPerm"
+  | "hairProtein";
+
+export type ServiceItem = {
+  id: ServiceItemId;
+  price: string;
+};
+
+export type ServiceCategory = {
+  id: ServiceCategoryId;
+  items: ServiceItem[];
+};
 
 export type SiteConfig = {
   logoSrc: string;
   bookingUrl: string;
   phoneTel: string;
   phoneDisplay: string;
+  whatsappUrl: string;
   instagramUrl: string;
   googleReviewsUrl: string;
   mapsSearchUrl: string;
@@ -43,8 +84,7 @@ export type SiteConfig = {
     gallery: MediaSlot[];
   };
   reviews: Review[];
-  prices: Partial<Record<ServiceId, string>>;
-  serviceIds: ServiceId[];
+  serviceMenu: ServiceCategory[];
 };
 
 export const SITE_CONFIG: SiteConfig = {
@@ -52,6 +92,7 @@ export const SITE_CONFIG: SiteConfig = {
   bookingUrl: "",
   phoneTel: "tel:+97335482131",
   phoneDisplay: "+973 3548 2131",
+  whatsappUrl: "https://wa.me/97335482131",
   instagramUrl: "https://www.instagram.com/thebutlerbarber/",
   googleReviewsUrl: "https://share.google/fu5eYccUNoOqsL8TA",
   mapsSearchUrl:
@@ -68,8 +109,8 @@ export const SITE_CONFIG: SiteConfig = {
   },
   hours: {
     opens: "09:00",
-    closes: "23:00",
-    display: "9:00 AM – 11:00 PM",
+    closes: "23:30",
+    display: "9:00 AM – 11:30 PM",
   },
   images: {
     hero: {
@@ -181,14 +222,52 @@ export const SITE_CONFIG: SiteConfig = {
       source: "Google Review",
     },
   ],
-  prices: {
-    cuts: "BHD 4",
-    fades: "BHD 5",
-    beard: "BHD 3",
-    combo: "BHD 6",
-    full: "BHD 10",
-  },
-  serviceIds: ["cuts", "fades", "beard", "combo", "full"],
+  serviceMenu: [
+    {
+      id: "hair",
+      items: [
+        { id: "classicCut", price: "2.000 BD" },
+        { id: "buzzCut", price: "2.500 BD" },
+        { id: "fadeCut", price: "2.500 BD" },
+        { id: "skinFade", price: "2.500 BD" },
+        { id: "childrenCut", price: "2.000 BD" },
+        { id: "headShave", price: "1.500 BD" },
+        { id: "hairShampoo", price: "1.000 BD" },
+      ],
+    },
+    {
+      id: "beard",
+      items: [
+        { id: "beardTrim", price: "1.500 BD" },
+        { id: "cleanShave", price: "1.500 BD" },
+        { id: "beardStyling", price: "2.000 BD" },
+        { id: "hotTowelShave", price: "3.000 BD" },
+        { id: "beardFadeStyle", price: "2.000 BD" },
+      ],
+    },
+    {
+      id: "colorFacial",
+      items: [
+        { id: "hairBeardColor", price: "5.000 BD" },
+        { id: "colorCorrection", price: "3.000 BD" },
+        { id: "highlights", price: "10.000 BD" },
+        { id: "classicFacial", price: "3.000 BD" },
+        { id: "cleansingFacial", price: "3.000 BD" },
+        { id: "brighteningFacial", price: "3.000 BD" },
+        { id: "specialFacial", price: "8.000 BD" },
+      ],
+    },
+    {
+      id: "waxTreatment",
+      items: [
+        { id: "fullFaceWax", price: "3.000 BD" },
+        { id: "noseEarWax", price: "2.000 BD" },
+        { id: "hairKeratin", price: "15.000 BD" },
+        { id: "curlyHairPerm", price: "20.000 BD" },
+        { id: "hairProtein", price: "15.000 BD" },
+      ],
+    },
+  ],
 };
 
 export const getBookingHref = (config: SiteConfig): string =>

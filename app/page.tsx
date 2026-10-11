@@ -9,6 +9,7 @@ import { Reviews } from "@/components/sections/Reviews/Reviews";
 import { Services } from "@/components/sections/Services/Services";
 import { Story } from "@/components/sections/Story/Story";
 import { SkipLink } from "@/components/ui/SkipLink";
+import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 
 export default function Home(): React.JSX.Element {
   return (
@@ -26,6 +27,7 @@ export default function Home(): React.JSX.Element {
         <Map />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 }

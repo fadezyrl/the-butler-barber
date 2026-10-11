@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { BookLink } from "@/components/ui/BookLink";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { LangSwitcher } from "@/components/ui/LangSwitcher";
 import { useLanguage } from "@/context/LanguageContext";
 
 export const Header = (): React.JSX.Element => {
@@ -84,17 +85,7 @@ export const Header = (): React.JSX.Element => {
       <a className="brand" href="#top" aria-label={dictionary.brand.homeAria}>
         <BrandMark />
       </a>
-      <button
-        className="menu-btn"
-        type="button"
-        aria-label={menuOpen ? dictionary.a11y.closeMenu : dictionary.a11y.openMenu}
-        aria-expanded={menuOpen}
-        aria-controls="navLinks"
-        onClick={() => setMenuOpen((open) => !open)}
-      >
-        <span />
-        <span />
-      </button>
+
       <nav className="nav-links" id="navLinks" aria-label={dictionary.a11y.mainNav}>
         <a href="#story" onClick={closeMenu}>
           {dictionary.nav.story}
@@ -110,6 +101,21 @@ export const Header = (): React.JSX.Element => {
         </a>
         <BookLink className="book" />
       </nav>
+
+      <div className="nav-end">
+        <LangSwitcher />
+        <button
+          className="menu-btn"
+          type="button"
+          aria-label={menuOpen ? dictionary.a11y.closeMenu : dictionary.a11y.openMenu}
+          aria-expanded={menuOpen}
+          aria-controls="navLinks"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+        </button>
+      </div>
     </header>
   );
 };
