@@ -164,7 +164,9 @@ export const en: Dictionary = {
   },
   lang: {
     en: "EN",
-    ar: "ع",
+    ar: "AR",
+    enFull: "English",
+    arFull: "العربية",
     switchTo: "Language",
   },
 };

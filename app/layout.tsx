@@ -5,6 +5,7 @@ import {
   Noto_Naskh_Arabic,
   Noto_Sans_Arabic,
 } from "next/font/google";
+import Script from "next/script";
 
 import { JsClass } from "@/components/JsClass";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -95,6 +96,9 @@ export default function RootLayout({
       className={`${cormorant.variable} ${manrope.variable} ${notoNaskh.variable} ${notoSansArabic.variable} h-full antialiased`}
     >
       <body className="min-h-full">
+        <Script id="butler-locale-init" strategy="beforeInteractive">
+          {`(function(){try{var k='butler-locale';var l=localStorage.getItem(k);if(l!=='ar'&&l!=='en')return;var d=document.documentElement;d.lang=l;d.dir=l==='ar'?'rtl':'ltr';d.dataset.locale=l;d.scrollLeft=0;if(document.body)document.body.scrollLeft=0;window.scrollTo(0,0);}catch(e){}})();`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

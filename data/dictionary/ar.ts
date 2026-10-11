@@ -162,7 +162,9 @@ export const ar: Dictionary = {
   },
   lang: {
     en: "EN",
-    ar: "ع",
+    ar: "AR",
+    enFull: "English",
+    arFull: "العربية",
     switchTo: "اللغة",
   },
 };

@@ -17,7 +17,7 @@ import {
   type Locale,
 } from "@/data/dictionary";
 
-const STORAGE_KEY = "butler-locale";
+export const LOCALE_STORAGE_KEY = "butler-locale";
 
 type LanguageContextValue = {
   locale: Locale;
@@ -31,37 +31,66 @@ type LanguageProviderProps = {
   children: ReactNode;
 };
 
+const resetHorizontalScroll = (): void => {
+  window.scrollTo(0, window.scrollY);
+  document.documentElement.scrollLeft = 0;
+  document.body.scrollLeft = 0;
+};
+
+const applyDocumentLocale = (locale: Locale): void => {
+  const root = document.documentElement;
+  root.lang = locale;
+  root.dir = localeDirection(locale);
+  root.dataset.locale = locale;
+  resetHorizontalScroll();
+};
+
+const readStoredLocale = (): Locale | null => {
+  try {
+    const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY);
+    return isLocale(stored) ? stored : null;
+  } catch {
+    return null;
+  }
+};
+
+const persistLocale = (locale: Locale): void => {
+  try {
+    window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+  } catch {
+    // Ignore persistence failures.
+  }
+};
+
 export const LanguageProvider = ({
   children,
 }: LanguageProviderProps): React.JSX.Element => {
   const [locale, setLocaleState] = useState<Locale>(DEFAULT_LOCALE);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    try {
-      const stored = window.localStorage.getItem(STORAGE_KEY);
-      if (isLocale(stored)) {
-        setLocaleState(stored);
-      }
-    } catch {
-      // Keep default English when storage is unavailable.
-    }
+    const fromDom = document.documentElement.lang;
+    const initial =
+      (isLocale(fromDom) ? fromDom : null) ??
+      readStoredLocale() ??
+      DEFAULT_LOCALE;
+
+    applyDocumentLocale(initial);
+    persistLocale(initial);
+    setLocaleState(initial);
+    setHydrated(true);
   }, []);
 
-  useEffect(() => {
-    const root = document.documentElement;
-    root.lang = locale;
-    root.dir = localeDirection(locale);
-
-    try {
-      window.localStorage.setItem(STORAGE_KEY, locale);
-    } catch {
-      // Ignore persistence failures.
-    }
-  }, [locale]);
-
   const setLocale = (next: Locale): void => {
+    applyDocumentLocale(next);
+    persistLocale(next);
     setLocaleState(next);
   };
+
+  useEffect(() => {
+    if (!hydrated) return;
+    applyDocumentLocale(locale);
+  }, [hydrated, locale]);
 
   const value: LanguageContextValue = {
     locale,

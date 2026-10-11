@@ -109,6 +109,8 @@ export type Dictionary = {
   lang: {
     en: string;
     ar: string;
+    enFull: string;
+    arFull: string;
     switchTo: string;
   };
 };
