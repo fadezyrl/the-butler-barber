@@ -88,7 +88,7 @@ export type SiteConfig = {
 };
 
 export const SITE_CONFIG: SiteConfig = {
-  logoSrc: "",
+  logoSrc: "/assets/logo/butler_logo.png",
   bookingUrl: "",
   phoneTel: "tel:+97335482131",
   phoneDisplay: "+973 3548 2131",
@@ -187,11 +187,6 @@ export const SITE_CONFIG: SiteConfig = {
       {
         src: "/assets/short-fade.jpg",
         alt: "Short fade haircut",
-        kind: "image",
-      },
-      {
-        src: "/assets/textured-cut.jpg",
-        alt: "Textured crop cut",
         kind: "image",
       },
     ],

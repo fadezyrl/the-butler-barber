@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Cormorant_Garamond,
-  Manrope,
-  Noto_Naskh_Arabic,
-  Noto_Sans_Arabic,
-} from "next/font/google";
+import { Noto_Naskh_Arabic, Noto_Sans_Arabic, Poppins } from "next/font/google";
 import Script from "next/script";
 
 import { JsClass } from "@/components/JsClass";
@@ -15,17 +10,10 @@ import { SITE_CONFIG } from "@/data/site-config";
 import "./globals.css";
 import "./styles/site.css";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-});
-
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "600", "700"],
 });
 
 const notoNaskh = Noto_Naskh_Arabic({
@@ -93,7 +81,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${cormorant.variable} ${manrope.variable} ${notoNaskh.variable} ${notoSansArabic.variable} h-full antialiased`}
+      className={`${poppins.variable} ${notoNaskh.variable} ${notoSansArabic.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         <Script id="butler-locale-init" strategy="beforeInteractive">

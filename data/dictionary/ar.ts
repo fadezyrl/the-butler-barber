@@ -21,7 +21,7 @@ export const ar: Dictionary = {
     closeMenu: "إغلاق القائمة",
     mainNav: "التنقل الرئيسي",
     footerNav: "تذييل الصفحة",
-    galleryTrack: "معرض الأعمال، مرّر أفقياً",
+    galleryTrack: "معرض الأعمال",
     prevImages: "الصور السابقة",
     nextImages: "الصور التالية",
     prevReview: "السابق",
@@ -100,7 +100,7 @@ export const ar: Dictionary = {
     introLead: "قصّات وفييد ولمسات نهائية من الكرسي. تابعنا على ",
     introTrail: ".",
     instagram: "إنستغرام",
-    scrollHint: "مرّر أو استخدم الأسهم",
+    scrollHint: "المزيد على إنستغرام",
     captions: [
       "قصة فييد عالية",
       "تحوّل قصة شعر قيد التنفيذ",
@@ -114,7 +114,6 @@ export const ar: Dictionary = {
       "بز كت أشقر",
       "فييد بلمسة برتقالية",
       "قصة فييد قصيرة",
-      "كروب منسّق",
     ],
   },
   reviews: {

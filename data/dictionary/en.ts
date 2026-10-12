@@ -22,7 +22,7 @@ export const en: Dictionary = {
     closeMenu: "Close menu",
     mainNav: "Main",
     footerNav: "Footer",
-    galleryTrack: "Gallery of work, scroll sideways",
+    galleryTrack: "Gallery of work",
     prevImages: "Previous images",
     nextImages: "Next images",
     prevReview: "Previous",
@@ -102,7 +102,7 @@ export const en: Dictionary = {
     introLead: "Cuts, fades and finishes from the chair. Follow along on ",
     introTrail: ".",
     instagram: "Instagram",
-    scrollHint: "Scroll or use the arrows",
+    scrollHint: "See more on Instagram",
     captions: [
       "High fade haircut",
       "Haircut transformation in progress",
@@ -116,7 +116,6 @@ export const en: Dictionary = {
       "Blonde buzz cut",
       "Orange-toned fade",
       "Short fade haircut",
-      "Textured crop cut",
     ],
   },
   reviews: {

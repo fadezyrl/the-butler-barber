@@ -19,7 +19,7 @@ export const Footer = (): JSX.Element => {
     <footer className="footer">
       <div className="foot-top">
         <div>
-          <BrandMark style={{ color: "var(--white)" }} />
+          <BrandMark className="foot-brand" style={{ color: "var(--white)" }} />
           <p className="foot-statement">{dictionary.footer.statement}</p>
         </div>
         <div className="foot-info">
