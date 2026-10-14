@@ -114,17 +114,17 @@ export const SITE_CONFIG: SiteConfig = {
   },
   images: {
     hero: {
-      src: "/assets/mens-haircut.mp4",
+      src: "/assets/videos/hero-butler.MP4",
       alt: "Barber finishing a men's haircut at The Butler Barber",
       kind: "video",
     },
     story: {
-      src: "/assets/classic-fade.jpg",
-      alt: "Classic fade finished at The Butler Barber",
-      kind: "image",
+      src: "/assets/videos/about-butler.mp4",
+      alt: "Inside The Butler Barber shop",
+      kind: "video",
     },
     cta: {
-      src: "/assets/fade-cut.mp4",
+      src: "/assets/videos/cta.mp4",
       alt: "Fade cut being finished at The Butler Barber",
       kind: "video",
     },
