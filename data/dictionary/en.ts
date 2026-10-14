@@ -59,9 +59,9 @@ export const en: Dictionary = {
       "Story photograph: the shop or a cut in progress, portrait crop",
   },
   services: {
-    titleLead: "The",
-    titleEm: "Menu",
-    note: "Clear prices in Bahraini Dinars. Full menu for hair, beard, color, facial and treatments.",
+    titleLead: "Our",
+    titleEm: "Services.",
+    note: "Clear prices in Bahraini Dinars. Hair, beard, color, facial and treatments — each one priced.",
     askPrice: "Ask for price",
     openNote: "Open every day, 9:00 AM to 11:30 PM.",
     categories: {
