@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Naskh_Arabic, Noto_Sans_Arabic, Poppins } from "next/font/google";
 import Script from "next/script";
 
 import { JsClass } from "@/components/JsClass";
 import { LanguageProvider } from "@/context/LanguageContext";
-import { en } from "@/data/dictionary/en";
-import { SITE_CONFIG } from "@/data/site-config";
+import { SEO, SITE_URL } from "@/data/seo";
+import { buildHairSalonJsonLd, buildWebSiteJsonLd } from "@/lib/json-ld";
 
 import "./globals.css";
 import "./styles/site.css";
+
+const LOGO_PATH = "/assets/logo/butler_logo.png";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -29,49 +31,76 @@ const notoSansArabic = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: en.meta.title,
-  description: en.meta.description,
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SEO.title,
+    template: `%s | ${SEO.siteName}`,
+  },
+  description: SEO.description,
+  applicationName: SEO.siteName,
+  keywords: [...SEO.keywords],
+  authors: [{ name: SEO.siteName, url: SITE_URL }],
+  creator: SEO.siteName,
+  publisher: SEO.siteName,
+  category: "barbershop",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
-    title: en.meta.ogTitle,
-    description: en.meta.ogDescription,
-    locale: "en_BH",
+    url: SITE_URL,
+    siteName: SEO.siteName,
+    title: SEO.ogTitle,
+    description: SEO.ogDescription,
+    locale: SEO.locale,
+    alternateLocale: ["ar_BH"],
+    images: [
+      {
+        url: SEO.ogImage.url,
+        width: SEO.ogImage.width,
+        height: SEO.ogImage.height,
+        alt: SEO.ogImage.alt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO.ogTitle,
+    description: SEO.ogDescription,
+    images: [SEO.ogImage.url],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico" }, { url: LOGO_PATH }],
+    apple: [{ url: LOGO_PATH }],
+    shortcut: "/favicon.ico",
   },
   other: {
-    "theme-color": "#1C1C1B",
+    "geo.region": "BH-13",
+    "geo.placename": "Gudaibiya, Manama",
   },
 };
 
-const jsonLd = {
+export const viewport: Viewport = {
+  themeColor: SEO.themeColor,
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
+const jsonLdGraph = {
   "@context": "https://schema.org",
-  "@type": "HairSalon",
-  name: "The Butler Barber",
-  description: en.meta.description,
-  telephone: "+97335482131",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: `${SITE_CONFIG.address.street}, ${SITE_CONFIG.address.shop}`,
-    addressLocality: SITE_CONFIG.address.locality,
-    postalCode: SITE_CONFIG.address.postalCode,
-    addressCountry: SITE_CONFIG.address.countryCode,
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Saturday",
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-      ],
-      opens: SITE_CONFIG.hours.opens,
-      closes: SITE_CONFIG.hours.closes,
-    },
-  ],
-  sameAs: [SITE_CONFIG.instagramUrl],
+  "@graph": [buildHairSalonJsonLd(), buildWebSiteJsonLd()],
 };
 
 export default function RootLayout({
@@ -89,7 +118,7 @@ export default function RootLayout({
         </Script>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
         />
         <JsClass />
         <LanguageProvider>{children}</LanguageProvider>

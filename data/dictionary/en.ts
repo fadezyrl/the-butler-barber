@@ -3,12 +3,12 @@ import type { Dictionary } from "./types";
 export const en: Dictionary = {
   meta: {
     title:
-      "The Butler Barber | Precision cuts and sharp fades in Gudaibiya, Manama",
+      "The Butler Barber | Barber Shop in Gudaibiya, Manama — Cuts, Fades & Beard",
     description:
-      "The Butler Barber in Gudaibiya, Manama: precision haircuts, sharp fades, beard trims and full grooming experiences tailored to your style.",
-    ogTitle: "The Butler Barber | Gudaibiya, Manama",
+      "Premium barbershop in Gudaibiya, Manama. Precision haircuts, skin fades, beard trims and full grooming from 9 AM to 11:30 PM. Book by phone or WhatsApp.",
+    ogTitle: "The Butler Barber | Barber in Gudaibiya, Manama",
     ogDescription:
-      "Precision haircuts, sharp fades, beard trims and full grooming experiences. Open daily 9 AM to 11:30 PM.",
+      "Precision cuts, sharp fades and beard grooming in Gudaibiya, Manama. Open daily 9:00 AM – 11:30 PM. Call +973 3548 2131.",
   },
   brand: {
     name: "The Butler Barber",

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { BookingCta } from "@/components/sections/BookingCta/BookingCta";
 import { Contact } from "@/components/sections/Contact/Contact";
 import { Footer } from "@/components/sections/Footer/Footer";
@@ -10,6 +12,15 @@ import { Services } from "@/components/sections/Services/Services";
 import { Story } from "@/components/sections/Story/Story";
 import { SkipLink } from "@/components/ui/SkipLink";
 import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
+import { SEO, SITE_URL } from "@/data/seo";
+
+export const metadata: Metadata = {
+  title: SEO.title,
+  description: SEO.description,
+  alternates: {
+    canonical: SITE_URL,
+  },
+};
 
 export default function Home(): React.JSX.Element {
   return (

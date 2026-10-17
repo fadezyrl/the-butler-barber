@@ -119,13 +119,13 @@ export const SITE_CONFIG: SiteConfig = {
       kind: "video",
     },
     story: {
-      src: "/assets/videos/about-butler.mp4",
+      src: "/assets/videos/IMG_0073.mp4",
       alt: "Inside The Butler Barber shop",
       kind: "video",
     },
     cta: {
-      src: "/assets/videos/cta.mp4",
-      alt: "Fade cut being finished at The Butler Barber",
+      src: "/assets/videos/about-butler.mp4",
+      alt: "Inside The Butler Barber shop",
       kind: "video",
     },
     gallery: [
