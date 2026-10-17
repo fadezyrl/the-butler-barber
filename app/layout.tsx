@@ -10,8 +10,6 @@ import { buildHairSalonJsonLd, buildWebSiteJsonLd } from "@/lib/json-ld";
 import "./globals.css";
 import "./styles/site.css";
 
-const LOGO_PATH = "/assets/logo/butler_logo.png";
-
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -81,9 +79,20 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/favicon.ico" }, { url: LOGO_PATH }],
-    apple: [{ url: LOGO_PATH }],
-    shortcut: "/favicon.ico",
+    icon: [
+      { url: "/icons/icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icons/icon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/icons/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/favicon.ico", type: "image/x-icon", sizes: "any" },
+    ],
+    apple: [
+      {
+        url: "/icons/apple-touch-icon.png",
+        type: "image/png",
+        sizes: "180x180",
+      },
+    ],
+    shortcut: [{ url: "/favicon.ico" }],
   },
   other: {
     "geo.region": "BH-13",
