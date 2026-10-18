@@ -9,7 +9,8 @@ import { SITE_CONFIG } from "@/data/site-config";
 export const Footer = (): JSX.Element => {
   const { dictionary } = useLanguage();
   const [year, setYear] = useState<number | null>(null);
-  const { address, phoneTel, phoneDisplay, instagramUrl } = SITE_CONFIG;
+  const { address, phoneTel, phoneDisplay, instagramUrl, developerUrl } =
+    SITE_CONFIG;
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -52,7 +53,17 @@ export const Footer = (): JSX.Element => {
       </div>
       <div className="foot-bottom">
         <span>
-          © {year ?? ""} {dictionary.footer.rights}
+          © {year ?? ""} {dictionary.footer.rightsBrand}{" "}
+          {dictionary.footer.developedBy}{" "}
+          <a
+            className="foot-credit"
+            href={developerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {dictionary.footer.developerName}
+          </a>
+          . {dictionary.footer.rightsTrail}
         </span>
         <span>{dictionary.footer.openEveryDay}</span>
       </div>

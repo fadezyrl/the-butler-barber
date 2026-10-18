@@ -151,7 +151,10 @@ export const ar: Dictionary = {
     explore: "استكشف",
     visit: "الزيارة",
     reach: "تواصل معنا",
-    rights: "ذا بتلر باربر. جميع الحقوق محفوظة.",
+    rightsBrand: "ذا بتلر باربر.",
+    developedBy: "تطوير",
+    developerName: "Fadezy",
+    rightsTrail: "جميع الحقوق محفوظة.",
     openEveryDay: "مفتوح كل يوم، من ٩:٠٠ صباحاً إلى ١١:٣٠ مساءً",
   },
   lang: {

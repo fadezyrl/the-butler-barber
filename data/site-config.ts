@@ -61,6 +61,7 @@ export type SiteConfig = {
   phoneDisplay: string;
   whatsappUrl: string;
   instagramUrl: string;
+  developerUrl: string;
   googleReviewsUrl: string;
   mapsSearchUrl: string;
   mapsEmbedUrl: string;
@@ -94,6 +95,7 @@ export const SITE_CONFIG: SiteConfig = {
   phoneDisplay: "+973 3548 2131",
   whatsappUrl: "https://wa.me/97335482131",
   instagramUrl: "https://www.instagram.com/thebutlerbarber/",
+  developerUrl: "https://www.fadezyrl.com/",
   googleReviewsUrl: "https://share.google/fu5eYccUNoOqsL8TA",
   mapsSearchUrl:
     "https://www.google.com/maps/search/?api=1&query=Gudaibiya+Road+2153+Block+321+Manama+Bahrain",

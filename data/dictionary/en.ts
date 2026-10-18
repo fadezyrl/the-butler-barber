@@ -152,7 +152,10 @@ export const en: Dictionary = {
     explore: "Explore",
     visit: "Visit",
     reach: "Reach us",
-    rights: "The Butler Barber. All rights reserved.",
+    rightsBrand: "The Butler Barber.",
+    developedBy: "Developed by",
+    developerName: "Fadezy",
+    rightsTrail: "All rights reserved.",
     openEveryDay: "Open every day, 9:00 AM to 11:30 PM",
   },
   lang: {

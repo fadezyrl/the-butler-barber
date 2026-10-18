@@ -103,7 +103,10 @@ export type Dictionary = {
     explore: string;
     visit: string;
     reach: string;
-    rights: string;
+    rightsBrand: string;
+    developedBy: string;
+    developerName: string;
+    rightsTrail: string;
     openEveryDay: string;
   };
   lang: {

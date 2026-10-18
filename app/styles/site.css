@@ -1750,6 +1750,18 @@ body.menu-open .wa-float {
   flex-wrap: wrap;
 }
 
+.foot-credit {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  transition: color 0.3s;
+}
+
+.foot-credit:hover {
+  color: var(--gold);
+}
+
 /* ---------- motion ---------- */
 .js .reveal {
   opacity: 0;
